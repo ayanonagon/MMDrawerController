@@ -332,7 +332,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
         CGRect visibleRect = CGRectIntersection(self.childControllerContainerView.bounds,sideDrawerViewController.view.frame);
 
         // Fixes drawer disappearance bug.
-        if (self.centerContainerView.frame.origin.x < 1) {
+        if (self.centerContainerView.frame.origin.x == 0.5) {
             CGRect fixedFrame = self.centerContainerView.frame;
             fixedFrame.origin.x = 0;
             self.centerContainerView.frame = fixedFrame;
